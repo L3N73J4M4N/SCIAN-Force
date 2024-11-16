@@ -2,7 +2,7 @@
 
 **SCIAN-Force** is software designed to analyze the deformation of Biocompatible Microdroplets (BMD) caused by cellular forces, enabling the quantification of anisotropic stresses on their surfaces. This non-invasive analysis is essential for studying cell migration processes, particularly in tumor progression and metastasis research.
 
-### References
+## References
 
 1. O. Càmpas et al., "Quantifying cell-generated forces within living embryonic tissues," *Nature Methods*, vol. 11, no. 2, pp. 183–189, 2014. DOI: [10.1038/nmeth.2761](https://doi.org/10.1038/nmeth.2761).
 2. S. Rusinkiewicz, "Estimating Curvatures and Their Derivatives on Triangle Meshes," in *Proceedings of the IEEE Symposium on 3D Data Processing, Visualization, and Transmission*, Thessaloniki, Greece, 2004, pp. 486–493. DOI: [10.1109/TDPVT.2004.1335277](https://doi.org/10.1109/TDPVT.2004.1335277).
