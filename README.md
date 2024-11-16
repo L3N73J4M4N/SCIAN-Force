@@ -62,6 +62,12 @@ pip install -r requirements.txt
 3. **Visualization:** Explore the interactive results, including stress and curvature maps.
 4. **Exportation:** Save the results in compatible formats such as spreadsheets.
 
+## Download SCIAN-Force
+
+You can download the latest version of **SCIAN-Force** for Windows as an executable file. Click the link below to start the download:
+
+[Download SCIAN-Force.exe (updated 2024/11/16)](https://drive.google.com/uc?export=download&id=1h19tu32tXrNWGeH0kh5f5b1cmYx68TyU)
+
 ## License
 
 This project is licensed under the MIT License.
@@ -128,6 +134,12 @@ pip install -r requirements.txt
 2. **Análisis:** SCIAN-Force calcula las tensiones anisotrópicas con `Forces3D`.
 3. **Visualización:** Explora los resultados interactivos generados, incluyendo mapas de tensiones y curvaturas.
 4. **Exportación:** Guarda los resultados en formatos compatibles, como hojas de cálculo.
+
+## Descargar SCIAN-Force
+
+Puedes descargar la última versión de **SCIAN-Force** para Windows como un archivo ejecutable. Haz clic en el siguiente enlace para iniciar la descarga:
+
+[Descargar SCIAN-Force.exe (updated 2024/11/16)](https://drive.google.com/uc?export=download&id=1h19tu32tXrNWGeH0kh5f5b1cmYx68TyU)
 
 ## Licencia
 Este proyecto está licenciado bajo la Licencia MIT.
