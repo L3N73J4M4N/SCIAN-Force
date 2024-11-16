@@ -68,6 +68,12 @@ This project is licensed under the MIT License.
 
 **SCIAN-Force** es un software diseñado para analizar la deformación de Microgotas Biocompatibles (BMD) causadas por fuerzas celulares, permitiendo cuantificar las tensiones anisotrópicas en su superficie. Este análisis no invasivo es clave en la investigación del proceso de migración celular, particularmente en estudios sobre progresión tumoral y metástasis.
 
+## Referencias
+
+1. O. Càmpas et al., "Quantifying cell-generated forces within living embryonic tissues," *Nature Methods*, vol. 11, no. 2, pp. 183–189, 2014. DOI: [10.1038/nmeth.2761](https://doi.org/10.1038/nmeth.2761).
+2. S. Rusinkiewicz, "Estimating Curvatures and Their Derivatives on Triangle Meshes," in *Proceedings of the IEEE Symposium on 3D Data Processing, Visualization, and Transmission*, Thessaloniki, Greece, 2004, pp. 486–493. DOI: [10.1109/TDPVT.2004.1335277](https://doi.org/10.1109/TDPVT.2004.1335277).
+3. M. Mayer et al., "Visualization of fluid dynamics using triangular meshes and curvature-driven smoothing," in *Mathematics and Visualization*, Springer, 2003, pp. 191–205. DOI: [10.1007/978-3-642-55566-6](https://doi.org/10.1007/978-3-642-55566-6).
+   
 ## Descripción
 
 SCIAN-Force realiza análisis avanzados, que incluyen:
