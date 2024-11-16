@@ -7,6 +7,7 @@ import os
 import numpy as np
 from forces import Forces3D
 from time import time
+from utility_forces import str2num
 
 
 class Mesh3D:
@@ -173,24 +174,6 @@ class Mesh3D:
                 print('obj_' + str(i) + ': saved', "--- %s seconds ---" % abs(time() - t0))
 
 
-def str2num(string, type_num='float'):
-    string_list = []
-    num_list = []
-    string += ' '
-    k = 0
-    for i in range(0, len(string) - 1):
-        if string[i + 1] == ' ' and string[i] != ' ':
-            string_list.append(string[k: i + 1])
-        if string[i] == ' ' and string[i + 1] != ' ':
-            k = i + 1
-    for s in string_list:
-        if type_num == 'float':
-            num_list.append(float(s))
-        if type_num == 'int':
-            num_list.append(int(s))
-    return num_list
-
-
 def off2mesh(namepath):
     with open(namepath, 'r') as path:
         lines = path.readlines()
@@ -206,41 +189,6 @@ def off2mesh(namepath):
             line = str2num(lines[i].strip(), 'int')
             faces[i - n - 2] = [int(line[1]), int(line[2]), int(line[3])]
         return vertices, faces
-
-
-def plot(mesh, curves=None, title='title', edges=False, rotate=False, show=True, fig=None):
-    v, f = mesh
-    if rotate is True:
-        x, y, z = v[:, 2], v[:, 1], v[:, 0]
-    else:
-        x, y, z = v[:, 0], v[:, 1], v[:, 2]
-    i, j, k = f[:, 0], f[:, 1], f[:, 2]
-    if fig is None:
-        fig = go.Figure(layout={'title': title})
-    if curves is None:
-        fig.add_mesh3d(x=x, y=y, z=z, i=i, j=j, k=k, color='red')
-    else:
-        fig.add_mesh3d(x=x, y=y, z=z, i=i, j=j, k=k,
-                       intensity=curves,
-                       coloraxis='coloraxis',
-                       text=np.ndarray.astype(curves, str))
-    if edges is True:
-        tri_points = v[f]
-        xe, ye, ze = [], [], []
-        for t in tri_points:
-            xe.extend([t[k % 3][0] for k in range(4)] + [None])
-            ye.extend([t[k % 3][1] for k in range(4)] + [None])
-            ze.extend([t[k % 3][2] for k in range(4)] + [None])
-        if rotate is True:
-            xe, ze = ze, xe
-        fig.add_scatter3d(x=xe, y=ye, z=ze, mode='lines', name='',
-                          line=dict(color='rgb(70,70,70)', width=1))
-    fig.update_layout(coloraxis={'colorscale': [[0, 'rgb(30,100,170)'],
-                                                [0.5, 'rgb(255,255,255)'],
-                                                [1, 'rgb(200,35,35)']]})
-    if show:
-        fig.show()
-    return fig
 
 
 def obj2mesh(path):
@@ -281,6 +229,7 @@ def nCurvatures(meshes, method='r', umbral=2.5):
 
 
 if __name__ == '__main__':
-    m = Mesh3D(path=r"C:\Users\matia\Desktop\SCIAN\stacks\droplets_ROI_02.tif")
+    m = Mesh3D(path=r".\demo\battle_10v5.tif", split=False)
     meshes = m.smooth()
     m.plot(curvatures=nCurvatures(meshes=meshes))
+    m.save_off(filename=r".\demo\battle_10v5")

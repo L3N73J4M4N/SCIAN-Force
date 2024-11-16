@@ -603,7 +603,7 @@ def get_colorscale(values, a=8, num_colors=256):
     Returns:
     - list: A list of [position, color] pairs representing the subset of the colorscale.
     """
-    b, c = np.min(values), np.max(values)
+    b, c = np.nanmin(values), np.nanmax(values)
     norm = Normalize(vmin=-a, vmax=a)
     # Usamos una escala de matplotlib RdBu, convertida a hexadecimal
     colorscale = [to_hex(cm.RdBu(norm(x))) for x in np.linspace(-a, a, num_colors)][::-1]
@@ -706,7 +706,8 @@ def make_sphere(r: int,
                 c=None,
                 one_tiff=True,
                 path=r'C:\\',
-                save=False):
+                save=False,
+                debug_dim=False):
     """
     Creates a 3D sphere within a stack of images.
 
@@ -718,6 +719,7 @@ def make_sphere(r: int,
     - one_tiff (bool): If True, saves the volume as a single TIFF file.
     - path (str): Directory path for saving the output.
     - save (bool): If True, saves the generated volume as a TIFF file.
+    - debug_dim(bool): If True, return dim and center tuple.
 
     Returns:
     - numpy.ndarray: A 3D array representing the sphere volume.
@@ -737,6 +739,8 @@ def make_sphere(r: int,
         c = (voxel_size[0] * dim[0] / 2,
              voxel_size[1] * dim[1] / 2,
              voxel_size[2] * dim[2] / 2)
+    if debug_dim:
+        return dim, c
     for z in range(dim[0]):
         for y in range(dim[1]):
             for x in range(dim[2]):
@@ -1091,10 +1095,34 @@ def theoretic_curvature_torus(x, y, z, c, ir, tr):
     return 1 / 2 * (1 / tr + np.cos(th) / ir)
 
 
-if __name__ == '__main__':
-    I = np.ones(20) * 2
-    K = np.linspace(2, 10, 20)
-    ellipsoids_hyperstack(I, I, K, path=r'C:\Users\matia\Desktop\ellipsoids\ellipsoid_z')
-    ellipsoids_hyperstack(I, K, I, path=r'C:\Users\matia\Desktop\ellipsoids\ellipsoid_y')
-    ellipsoids_hyperstack(K, I, I, path=r'C:\Users\matia\Desktop\ellipsoids\ellipsoid_x')
+def save_stack(path, stack, one_tiff=True):
+    dirname = os.path.dirname(path)
+    if not os.path.isdir(dirname):
+        os.makedirs(dirname)
+    if path[-4:] == '.tif':
+        path = path[: -4]
+    elif path[-5:] == '.tiff':
+        path = path[: -5]
 
+    if one_tiff is True:
+        path += '.tif'
+        imwrite(path, stack.astype(np.uint8))
+    else:
+        for k in range(0, len(stack)):
+            sub_path = path + f'_ch_000_z00{k}.tif'
+            imwrite(sub_path, stack[k].astype(np.uint8))
+
+
+if __name__ == '__main__':
+    voxel_size = (0.5, 0.163, 0.163)
+    dim10, c10 = make_sphere(10, voxel_size=voxel_size, debug_dim=True)
+    dim5, _ = make_sphere(5, voxel_size=voxel_size, debug_dim=True)
+    s10 = make_sphere(10, voxel_size=voxel_size,
+                      dim=(dim10[0], dim10[1], dim10[2] + dim5[2]),
+                      c=c10)
+    s5 = make_sphere(5, voxel_size=voxel_size,
+                     dim=(dim10[0], dim10[1], dim10[2] + dim5[2]),
+                     c=(c10[0], c10[1], c10[2] + 10))
+    stack = s10 - s5
+    stack[stack < 0] = 0
+    save_stack(r'.\demo\battle_10v5.tif', stack)

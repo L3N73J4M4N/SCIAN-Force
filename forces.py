@@ -1036,11 +1036,10 @@ class Forces3D:
 
 
 if __name__ == '__main__':
-    f = Forces3D(path=r"C:\RSI\stack_ROI_02_AC3D_Obj_\obj (1).off",
-                 interval='0.163x0.163x0.5', rotate=True)
+    f = Forces3D(path=r".\demo\battle_10v5_obj_0.off",
+                 rotate=True)
     f.fix_mesh()
     f.rusinkiewicz_curvature()
-    f.stress(gamma=1)
-    f.limit_curvatures(-2, 2)
-    f.plot_go(axis=False, max_value=2)
+    f.stress(gamma=1.0)
+    f.plot_go()
 
