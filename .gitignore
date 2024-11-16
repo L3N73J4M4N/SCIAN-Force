@@ -2,3 +2,5 @@
 *.npy
 *.off
 *.pkl
+stats.py
+test.py
