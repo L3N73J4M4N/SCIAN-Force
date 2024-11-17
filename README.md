@@ -4,6 +4,8 @@
 
 ## References
 
+[![Poster](https://img.shields.io/badge/Poster-PDF-blue)](https://github.com/L3N73J4M4N/SCIAN-Force/releases/download/SCIAN-Force/2024_Poster_MCarvajal_SCIANForce_SCIANDrop.pdf)
+
 **[1]** R. Lucio, A. Arashiro, and N. R. Demarquette, "Pendant drop method: A generalization of the Laplace equation to measure interfacial tension," in *Materials Research*, vol. 18, no. 1, pp. 23–32, 2015. DOI: [10.1590/1516-1439.267314](https://doi.org/10.1590/1516-1439.267314).
 
 **[2]** O. Càmpas et al., "Quantifying cell-generated forces within living embryonic tissues," *Nature Methods*, vol. 11, no. 2, pp. 183–189, 2014. DOI: [10.1038/nmeth.2761](https://doi.org/10.1038/nmeth.2761).
@@ -66,7 +68,7 @@ pip install -r requirements.txt
 
 You can download the latest version of **SCIAN-Force** for Windows as an executable file. Click the link below to start the download:
 
-[Download SCIAN-Force.exe (updated 2024/11/16)](https://drive.google.com/uc?export=download&id=1h19tu32tXrNWGeH0kh5f5b1cmYx68TyU)
+[Download SCIAN-Force.exe (updated 2024/11/16)](https://github.com/L3N73J4M4N/SCIAN-Force/releases/download/SCIAN-Force/SCIAN-Force.v2024.11.08.exe)
 
 ## License
 
@@ -79,6 +81,8 @@ This project is licensed under the MIT License.
 **SCIAN-Force** es un software diseñado para analizar la deformación de Microgotas Biocompatibles (BMD) causadas por fuerzas celulares, permitiendo cuantificar las tensiones anisotrópicas en su superficie. Este análisis no invasivo es clave en la investigación del proceso de migración celular, particularmente en estudios sobre progresión tumoral y metástasis.
 
 ## Referencias
+
+[![Poster](https://img.shields.io/badge/Poster-PDF-blue)](https://github.com/L3N73J4M4N/SCIAN-Force/releases/download/SCIAN-Force/2024_Poster_MCarvajal_SCIANForce_SCIANDrop.pdf)
 
 **[1]** R. Lucio, A. Arashiro, and N. R. Demarquette, "Pendant drop method: A generalization of the Laplace equation to measure interfacial tension," in *Materials Research*, vol. 18, no. 1, pp. 23–32, 2015. DOI: [10.1590/1516-1439.267314](https://doi.org/10.1590/1516-1439.267314).
 
@@ -139,7 +143,7 @@ pip install -r requirements.txt
 
 Puedes descargar la última versión de **SCIAN-Force** para Windows como un archivo ejecutable. Haz clic en el siguiente enlace para iniciar la descarga:
 
-[Descargar SCIAN-Force.exe (updated 2024/11/16)](https://drive.google.com/uc?export=download&id=1h19tu32tXrNWGeH0kh5f5b1cmYx68TyU)
+[Descargar SCIAN-Force.exe (updated 2024/11/16)](https://github.com/L3N73J4M4N/SCIAN-Force/releases/download/SCIAN-Force/SCIAN-Force.v2024.11.08.exe)
 
 ## Licencia
 Este proyecto está licenciado bajo la Licencia MIT.
