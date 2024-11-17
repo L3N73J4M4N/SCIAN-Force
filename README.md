@@ -4,15 +4,17 @@
 
 ## References
 
-[![Poster](https://img.shields.io/badge/Poster-PDF-blue)](https://github.com/L3N73J4M4N/SCIAN-Force/releases/download/SCIAN-Force/2024_Poster_MCarvajal_SCIANForce_SCIANDrop.pdf)
+[![SCIAN-Drop & SCIAN-Force: Quantification of Membrane Deformation via Image Analysis of Biocompatible Fluorocarbon MicroDroplets](https://img.shields.io/badge/Poster-PDF-blue)](https://github.com/L3N73J4M4N/SCIAN-Force/releases/download/SCIAN-Force/2024_Poster_MCarvajal_SCIANForce_SCIANDrop.pdf)
 
-**[1]** R. Lucio, A. Arashiro, and N. R. Demarquette, "Pendant drop method: A generalization of the Laplace equation to measure interfacial tension," in *Materials Research*, vol. 18, no. 1, pp. 23–32, 2015. DOI: [10.1590/1516-1439.267314](https://doi.org/10.1590/1516-1439.267314).
+**[1]** M. Carvajal et al., "SCIAN-Drop & SCIAN-Force: Quantification of Membrane Deformation via Image Analysis of Biocompatible Fluorocarbon MicroDroplets," XXXVI REUNIÓN ANUAL SOCIEDAD DE BIOLOGÍA CELULAR DE CHILE, 2024. Available in: [Poster SCIAN-Drop & SCIAN-Force](https://github.com/L3N73J4M4N/SCIAN-Force/releases/download/SCIAN-Force/2024_Poster_MCarvajal_SCIANForce_SCIANDrop.pdf).
 
-**[2]** O. Càmpas et al., "Quantifying cell-generated forces within living embryonic tissues," *Nature Methods*, vol. 11, no. 2, pp. 183–189, 2014. DOI: [10.1038/nmeth.2761](https://doi.org/10.1038/nmeth.2761).
+**[2]** R. Lucio, A. Arashiro, and N. R. Demarquette, "Pendant drop method: A generalization of the Laplace equation to measure interfacial tension," in *Materials Research*, vol. 18, no. 1, pp. 23–32, 2015. DOI: [10.1590/1516-1439.267314](https://doi.org/10.1590/1516-1439.267314).
 
-**[3]** S. Rusinkiewicz, "Estimating Curvatures and Their Derivatives on Triangle Meshes," in *Proceedings of the IEEE Symposium on 3D Data Processing, Visualization, and Transmission*, Thessaloniki, Greece, 2004, pp. 486–493. DOI: [10.1109/TDPVT.2004.1335277](https://doi.org/10.1109/TDPVT.2004.1335277).
+**[3]** O. Càmpas et al., "Quantifying cell-generated forces within living embryonic tissues," *Nature Methods*, vol. 11, no. 2, pp. 183–189, 2014. DOI: [10.1038/nmeth.2761](https://doi.org/10.1038/nmeth.2761).
 
-**[4]** M. Mayer et al., "Visualization of fluid dynamics using triangular meshes and curvature-driven smoothing," in *Mathematics and Visualization*, Springer, 2003, pp. 191–205. DOI: [10.1007/978-3-642-55566-6](https://doi.org/10.1007/978-3-642-55566-6).
+**[4]** S. Rusinkiewicz, "Estimating Curvatures and Their Derivatives on Triangle Meshes," in *Proceedings of the IEEE Symposium on 3D Data Processing, Visualization, and Transmission*, Thessaloniki, Greece, 2004, pp. 486–493. DOI: [10.1109/TDPVT.2004.1335277](https://doi.org/10.1109/TDPVT.2004.1335277).
+
+**[5]** M. Mayer et al., "Visualization of fluid dynamics using triangular meshes and curvature-driven smoothing," in *Mathematics and Visualization*, Springer, 2003, pp. 191–205. DOI: [10.1007/978-3-642-55566-6](https://doi.org/10.1007/978-3-642-55566-6).
    
 ## Description
 
